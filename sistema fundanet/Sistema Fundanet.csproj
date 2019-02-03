@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A1307DE-25DB-4671-84D3-9E7C31FF2A83}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema_Fundanet</RootNamespace>
+    <AssemblyName>Sistema Fundanet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>.\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>.\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CapaPresentacion\Imagenes\AgregarAlumno.png" />
+    <Content Include="CapaPresentacion\Imagenes\AgregarPersona.png" />
+    <Content Include="CapaPresentacion\Imagenes\AgregarUsuario.png" />
+    <Content Include="CapaPresentacion\Imagenes\ConsultarAlumno.png" />
+    <Content Include="CapaPresentacion\Imagenes\ConsultarPersonal.png" />
+    <Content Include="CapaPresentacion\Imagenes\ConsultarUsuario.png" />
+    <Content Include="CapaPresentacion\Imagenes\EliminarUsuario.png" />
+    <Content Include="CapaPresentacion\Imagenes\FundanetBannersuperior.png" />
+    <Content Include="CapaPresentacion\Imagenes\ModificarAlumno.png" />
+    <Content Include="CapaPresentacion\Imagenes\ModificarPersonal.png" />
+    <Content Include="CapaPresentacion\Imagenes\ModificarRol.png" />
+    <Content Include="CapaPresentacion\Imagenes\ModificarUsuario.png" />
+    <Content Include="CapaPresentacion\Imagenes\Prueba.png" />
+    <Content Include="CapaPresentacion\ModAlumnos\AgregarAlumno.aspx" />
+    <Content Include="CapaPresentacion\ModAlumnos\ConsultarAlumno.aspx" />
+    <Content Include="CapaPresentacion\ModAlumnos\ModificarAlumno.aspx" />
+    <Content Include="CapaPresentacion\ModCursos\ConsultarCurso.aspx" />
+    <Content Include="CapaPresentacion\ModCursos\EliminarCurso.aspx" />
+    <Content Include="CapaPresentacion\ModCursos\ModificarCurso.aspx" />
+    <Content Include="CapaPresentacion\ModGenerar\GenerarConstancia.aspx" />
+    <Content Include="CapaPresentacion\ModGenerar\GenerarRecibo.aspx" />
+    <Content Include="CapaPresentacion\ModInscripciones\AgregarInscripcion.aspx" />
+    <Content Include="CapaPresentacion\ModInscripciones\ConsultarInscripcion.aspx" />
+    <Content Include="CapaPresentacion\ModPersonas\AgregarPersona.aspx" />
+    <Content Include="CapaPresentacion\ModPersonas\ConsultarPersona.aspx" />
+    <Content Include="CapaPresentacion\ModPersonas\ModificarPersona.aspx" />
+    <Content Include="CapaPresentacion\ModRoles\AgregarRol.aspx" />
+    <Content Include="CapaPresentacion\ModCursos\AgregarCurso.aspx" />
+    <Content Include="CapaPresentacion\Master\HojaDeEstilos.css" />
+    <Content Include="CapaPresentacion\ModInicio\Login.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CapaPresentacion\ModRoles\ModificarRol.aspx" />
+    <Content Include="CapaPresentacion\ModSecciones\AgregarSeccion.aspx" />
+    <Content Include="CapaPresentacion\ModSecciones\ConsultarSeccion.aspx" />
+    <Content Include="CapaPresentacion\ModSecciones\EliminarSeccion.aspx" />
+    <Content Include="CapaPresentacion\ModSecciones\ModificarSeccion.aspx" />
+    <Content Include="CapaPresentacion\ModUsuarios\AgregarUsuario.aspx" />
+    <Content Include="CapaPresentacion\ModUsuarios\ConsultarUsuario.aspx" />
+    <Content Include="CapaPresentacion\ModUsuarios\EliminarUsuario.aspx" />
+    <Content Include="CapaPresentacion\ModUsuarios\ModificarUsuario.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="CapaPresentacion\ModInicio\Inicio.aspx" />
+    <Content Include="CapaPresentacion\ModRoles\ConsultarRol.aspx" />
+    <Content Include="CapaPresentacion\ModRoles\EliminarRol.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CapaDatos\ConexionBD\ConexionBDAlumno.cs" />
+    <Compile Include="CapaDatos\ConexionBD\ConexionBDInscripcion.cs" />
+    <Compile Include="CapaDatos\ConexionBD\ConexionBDPersona.cs" />
+    <Compile Include="CapaDatos\ConexionBD\ConexionBDSeccion.cs" />
+    <Compile Include="CapaDatos\ConexionBD\ConexionBDUsuario.cs" />
+    <Compile Include="CapaDatos\Objetos\Curso.cs" />
+    <Compile Include="CapaDatos\Objetos\Horario.cs" />
+    <Compile Include="CapaDatos\Objetos\ListaSeccion.cs" />
+    <Compile Include="CapaDatos\Objetos\ListHorario.cs" />
+    <Compile Include="CapaDatos\Objetos\Persona.cs" />
+    <Compile Include="CapaDatos\Objetos\Salon.cs" />
+    <Compile Include="CapaDatos\Objetos\Seccion.cs" />
+    <Compile Include="CapaDatos\Objetos\Usuario.cs" />
+    <Compile Include="CapaPresentacion\Master\PaginaLogin.Master.cs">
+      <DependentUpon>PaginaLogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Master\PaginaLogin.Master.designer.cs">
+      <DependentUpon>PaginaLogin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModAlumnos\AgregarAlumno.aspx.cs">
+      <DependentUpon>AgregarAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModAlumnos\AgregarAlumno.aspx.designer.cs">
+      <DependentUpon>AgregarAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModAlumnos\ConsultarAlumno.aspx.cs">
+      <DependentUpon>ConsultarAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModAlumnos\ConsultarAlumno.aspx.designer.cs">
+      <DependentUpon>ConsultarAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModAlumnos\ModificarAlumno.aspx.cs">
+      <DependentUpon>ModificarAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModAlumnos\ModificarAlumno.aspx.designer.cs">
+      <DependentUpon>ModificarAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModCursos\ConsultarCurso.aspx.cs">
+      <DependentUpon>ConsultarCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModCursos\ConsultarCurso.aspx.designer.cs">
+      <DependentUpon>ConsultarCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModCursos\EliminarCurso.aspx.cs">
+      <DependentUpon>EliminarCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModCursos\EliminarCurso.aspx.designer.cs">
+      <DependentUpon>EliminarCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModCursos\ModificarCurso.aspx.cs">
+      <DependentUpon>ModificarCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModCursos\ModificarCurso.aspx.designer.cs">
+      <DependentUpon>ModificarCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModGenerar\GenerarConstancia.aspx.cs">
+      <DependentUpon>GenerarConstancia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModGenerar\GenerarConstancia.aspx.designer.cs">
+      <DependentUpon>GenerarConstancia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModGenerar\GenerarRecibo.aspx.cs">
+      <DependentUpon>GenerarRecibo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModGenerar\GenerarRecibo.aspx.designer.cs">
+      <DependentUpon>GenerarRecibo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModInscripciones\AgregarInscripcion.aspx.cs">
+      <DependentUpon>AgregarInscripcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModInscripciones\AgregarInscripcion.aspx.designer.cs">
+      <DependentUpon>AgregarInscripcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModInscripciones\ConsultarInscripcion.aspx.cs">
+      <DependentUpon>ConsultarInscripcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModInscripciones\ConsultarInscripcion.aspx.designer.cs">
+      <DependentUpon>ConsultarInscripcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModPersonas\AgregarPersona.aspx.cs">
+      <DependentUpon>AgregarPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModPersonas\AgregarPersona.aspx.designer.cs">
+      <DependentUpon>AgregarPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModPersonas\ConsultarPersona.aspx.cs">
+      <DependentUpon>ConsultarPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModPersonas\ConsultarPersona.aspx.designer.cs">
+      <DependentUpon>ConsultarPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModPersonas\ModificarPersona.aspx.cs">
+      <DependentUpon>ModificarPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModPersonas\ModificarPersona.aspx.designer.cs">
+      <DependentUpon>ModificarPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModRoles\AgregarRol.aspx.cs">
+      <DependentUpon>AgregarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModRoles\AgregarRol.aspx.designer.cs">
+      <DependentUpon>AgregarRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ConexionBD\ConexionBDCursos.cs" />
+    <Compile Include="CapaDatos\ConexionBD\ConexionBDRol.cs" />
+    <Compile Include="CapaPresentacion\ModCursos\AgregarCurso.aspx.cs">
+      <DependentUpon>AgregarCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModCursos\AgregarCurso.aspx.designer.cs">
+      <DependentUpon>AgregarCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModInicio\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModInicio\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CapaPresentacion\Master\PaginaPrincipal.Master.cs">
+      <DependentUpon>PaginaPrincipal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Master\PaginaPrincipal.Master.designer.cs">
+      <DependentUpon>PaginaPrincipal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModRoles\ModificarRol.aspx.cs">
+      <DependentUpon>ModificarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModRoles\ModificarRol.aspx.designer.cs">
+      <DependentUpon>ModificarRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModSecciones\AgregarSeccion.aspx.cs">
+      <DependentUpon>AgregarSeccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModSecciones\AgregarSeccion.aspx.designer.cs">
+      <DependentUpon>AgregarSeccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModSecciones\ConsultarSeccion.aspx.cs">
+      <DependentUpon>ConsultarSeccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModSecciones\ConsultarSeccion.aspx.designer.cs">
+      <DependentUpon>ConsultarSeccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModSecciones\EliminarSeccion.aspx.cs">
+      <DependentUpon>EliminarSeccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModSecciones\EliminarSeccion.aspx.designer.cs">
+      <DependentUpon>EliminarSeccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModSecciones\ModificarSeccion.aspx.cs">
+      <DependentUpon>ModificarSeccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModSecciones\ModificarSeccion.aspx.designer.cs">
+      <DependentUpon>ModificarSeccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModUsuarios\AgregarUsuario.aspx.cs">
+      <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModUsuarios\AgregarUsuario.aspx.designer.cs">
+      <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModUsuarios\ConsultarUsuario.aspx.cs">
+      <DependentUpon>ConsultarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModUsuarios\ConsultarUsuario.aspx.designer.cs">
+      <DependentUpon>ConsultarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModUsuarios\EliminarUsuario.aspx.cs">
+      <DependentUpon>EliminarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModUsuarios\EliminarUsuario.aspx.designer.cs">
+      <DependentUpon>EliminarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModUsuarios\ModificarUsuario.aspx.cs">
+      <DependentUpon>ModificarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModUsuarios\ModificarUsuario.aspx.designer.cs">
+      <DependentUpon>ModificarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CapaPresentacion\ModInicio\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModInicio\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModRoles\ConsultarRol.aspx.cs">
+      <DependentUpon>ConsultarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModRoles\ConsultarRol.aspx.designer.cs">
+      <DependentUpon>ConsultarRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\Objetos\Rol.cs" />
+    <Compile Include="CapaPresentacion\ModRoles\EliminarRol.aspx.cs">
+      <DependentUpon>EliminarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModRoles\EliminarRol.aspx.designer.cs">
+      <DependentUpon>EliminarRol.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CapaPresentacion\Master\PaginaPrincipal.Master" />
+    <Content Include="CapaPresentacion\Master\PaginaLogin.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49404</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53376/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

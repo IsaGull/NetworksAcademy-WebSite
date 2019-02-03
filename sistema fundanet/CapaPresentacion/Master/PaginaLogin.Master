@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaLogin.master.cs" Inherits="Sistema_Fundanet.CapaPresentacion.Master.PaginaLogin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+
+     <link href="HojaDeEstilos.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    
+    
+</head>
+<body >
+    <form id="form1" runat="server">
+       
+        <table width="100%"  border="0">
+            <tr>
+                <td >
+
+         
+                       <img  src="../Imagenes/FundanetBannersuperior.png" class="img"/>
+                   
+
+                </td>
+               
+            </tr>
+           
+             
+            
+          </table>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        
+                       
+            </asp:ContentPlaceHolder>
+               
+
+
+    </form>
+</body>
+</html>

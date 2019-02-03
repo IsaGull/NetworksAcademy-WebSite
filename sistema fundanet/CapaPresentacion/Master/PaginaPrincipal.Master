@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaPrincipal.master.cs" Inherits="Sistema_Fundanet.CapaPresentacion.Master.PaginaPrincipal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+     <link href="HojaDeEstilos.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    
+    
+</head>
+<body >
+    <form id="form1" runat="server">
+       
+        <table width="100%"  border="0">
+            <tr>
+                <td >
+
+         
+                       <img  src="../Imagenes/FundanetBannersuperior.png" class="img"/>
+                   
+
+                </td>
+               
+            </tr>
+            <tr>
+              <td colspan="1" >
+                  <div id="menu" style="margin-left:auto;margin-right:auto">
+                  <asp:Menu ID="Menu" runat="server" BackColor="#99CCFF" DynamicHorizontalOffset="50" Font-Names="Candara" Font-Size="Large" ForeColor="Black" Orientation="Horizontal" StaticSubMenuIndent="2px" Font-Bold="True">
+                            <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                            <DynamicMenuItemStyle HorizontalPadding="20px" VerticalPadding="2px" Font-Size="Small" />
+                            <DynamicMenuStyle BackColor="#E3EAEB" BorderColor="#0000CC" BorderStyle="Double" />
+                            <DynamicSelectedStyle BackColor="#1C5E55" />
+                            <Items>
+                                <asp:MenuItem Text="Roles" Value="Roles" Selectable="False">
+                                    <asp:MenuItem Text="Agregar" Value="Agregar" NavigateUrl="../ModRoles/AgregarRol.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Modificar" Value="Modificar" NavigateUrl="../ModRoles/ModificarRol.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Eliminar" Value="Eliminar" NavigateUrl="../ModRoles/EliminarRol.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Consultar" Value="Consultar"  NavigateUrl="../ModRoles/ConsultarRol.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Usuarios" Value="Usuarios"  Selectable="False">
+                                    <asp:MenuItem Text="Agregar" Value="Agregar" NavigateUrl="../ModUsuarios/AgregarUsuario.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Modificar" Value="Modificar" NavigateUrl="../ModUsuarios/ModificarUsuario.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Eliminar" Value="Eliminar" NavigateUrl="../ModUsuarios/EliminarUsuario.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Consultar" Value="Consultar" NavigateUrl="../ModUsuarios/ConsultarUsuario.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Personal" Value="Personal" >
+                                    <asp:MenuItem Text="Agregar" Value="Agregar" NavigateUrl="../ModPersonas/AgregarPersona.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Modificar" Value="Modificar" NavigateUrl="../ModPersonas/ModificarPersona.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Consultar" Value="Consultar" NavigateUrl="../ModPersonas/ConsultarPersona.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Cursos" Value="Cursos">
+                                    <asp:MenuItem Text="Agregar" Value="Agregar"  NavigateUrl="../ModCursos/AgregarCurso.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Modificar" Value="Modificar"  NavigateUrl="../ModCursos/ModificarCurso.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Eliminar" Value="Eliminar"  NavigateUrl="../ModCursos/EliminarCurso.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Consultar" Value="Consultar"  NavigateUrl="../ModCursos/ConsultarCurso.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Secciones" Value="Secciones">
+                                    <asp:MenuItem Text="Agregar" Value="Agregar" NavigateUrl="../ModSecciones/AgregarSeccion.aspx"></asp:MenuItem>
+                                 <%--   <asp:MenuItem Text="Modificar" Value="Modificar" NavigateUrl="../ModSecciones/ModificarSeccion.aspx"></asp:MenuItem>--%>
+                                    <asp:MenuItem Text="Eliminar" Value="Eliminar" NavigateUrl="../ModSecciones/EliminarSeccion.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Consultar" Value="Consultar" NavigateUrl="../ModSecciones/ConsultarSeccion.aspx"></asp:MenuItem>
+                                 <%--   <asp:MenuItem Text="Cargar Notas" Value="Cargar Notas"></asp:MenuItem>
+                                    <asp:MenuItem Text="Enviar Notificación" Value="Enviar Notificación"></asp:MenuItem>--%>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Inscripciones" Value="Inscripciones">
+                                    <asp:MenuItem Text="Nueva Inscripción" Value="Nuevo Alumno"  NavigateUrl="../ModInscripciones/AgregarInscripcion.aspx"></asp:MenuItem>
+                                   <%-- <asp:MenuItem Text="Alumno Existente" Value="Alumno Existente"></asp:MenuItem>--%>
+                                <%--    <asp:MenuItem Text="Modificar" Value="Modificar"></asp:MenuItem>
+                                    <asp:MenuItem Text="Eliminar" Value="Eliminar"></asp:MenuItem>--%>
+                                    <asp:MenuItem Text="Consultar" Value="Consultar"  NavigateUrl="../ModInscripciones/ConsultarInscripcion.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                               <%-- <asp:MenuItem Selectable="False" Text="Pagos" Value="Pagos">
+                                    <asp:MenuItem Text="Registrar Pago" Value="Registrar Pago"></asp:MenuItem>
+                                    <asp:MenuItem Text="Modificar" Value="Modificar"></asp:MenuItem>
+                                    <asp:MenuItem Text="Eliminar" Value="Eliminar"></asp:MenuItem>
+                                    <asp:MenuItem Text="Consultar" Value="Consultar"></asp:MenuItem>
+                                </asp:MenuItem>--%>
+                                <asp:MenuItem Selectable="False" Text="Alumnos" Value="Alumnos">
+                                    <asp:MenuItem Text="Agregar" Value="Agregar" NavigateUrl="../ModAlumnos/AgregarAlumno.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Modificar" Value="Modificar" NavigateUrl="../ModAlumnos/ModificarAlumno.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Consultar" Value="Consultar" NavigateUrl="../ModAlumnos/ConsultarAlumno.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Documentos" Value="Documentos">
+                                    <asp:MenuItem Text="Generar Certificado" Value="Generar Certificado" NavigateUrl="../ModGenerar/GenerarConstancia.aspx" ></asp:MenuItem>
+                                    <asp:MenuItem Text="Generar Constancia"  Value="Generar Constancia" NavigateUrl="../ModGenerar/GenerarRecibo.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" Font-Size="Large" />
+                            <StaticSelectedStyle BackColor="#1C5E55" />
+                        </asp:Menu>
+                      
+                  </div>
+              </td>
+                
+            </tr>
+            
+            </table>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        
+                       
+            </asp:ContentPlaceHolder>
+               
+
+
+    </form>
+</body>
+</html>
